@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>Adam Kaewell's Blog</title>
+ <link href="http://a2k11.github.io/atom.xml" rel="self"/>
+ <link href="http://a2k11.github.io/"/>
+ <updated>2014-10-19T23:13:13-04:00</updated>
+ <id>http://a2k11.github.io</id>
+ <author>
+   <name>Adam</name>
+   <email>adam.kaewell@gmail.com</email>
+ </author>
+
+ 
+ <entry>
+   <title>Class Relationships</title>
+   <link href="http://a2k11.github.io/2014/10/13/has-many-belongs-to/"/>
+   <updated>2014-10-13T00:00:00-04:00</updated>
+   <id>http://a2k11.github.io/2014/10/13/has-many-belongs-to</id>
+   <content type="html">&lt;h3&gt;Has Many and Belongs To&lt;/h3&gt;
+
+&lt;p&gt;There is a relationship we can define between classes in ruby which makes it
+very easy to communicate between objects in rails.  If we decide to have an
+application which has a Gallery model and an Image model ( &lt;em&gt;Note classes are
+singular, controllers are plural&lt;/em&gt; ), we can relate the two simply by using the
+code below:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;
+class Gallery &lt; ActiveRecord::Base
+  has_many :images
+end
+
+class Image &lt; ActiverRecord::Base
+  belongs_to :gallery
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;Pluralizing classes is important when using these connections with another
+model.  It also helps to draw an ERD (Entity Relationship Diagram) to help
+decide whether you need these connections.  It makes it easier to see a solution to a problem.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>I Shook Sinatra.rb's Hand</title>
+   <link href="http://a2k11.github.io/2014/10/03/fall-into-october/"/>
+   <updated>2014-10-03T00:00:00-04:00</updated>
+   <id>http://a2k11.github.io/2014/10/03/fall-into-october</id>
+   <content type="html">&lt;h3&gt;Week 2 Learning&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;I have made it through another week.&lt;/em&gt;  &lt;a href=&quot;http://www.sinatrarb.com/&quot;&gt;Sinatra&lt;/a&gt; is a DSL, domain specific
+language, for creating web applications in Ruby.  It uses routes which are HTTP
+methods paired with a URL matching pattern.  Each route has a block and I have
+created many routes throughout the week.  It&#39;s very interesting and fun to build an
+application and be able to view your work on a local server.  I find it
+rewarding to finish a project in class at the end of the day.  It makes me focus
+more during class and it helps me greatly later on.&lt;/p&gt;
+
+&lt;h3&gt;I should log, about this blog, go for a jog, escape the fog&lt;/h3&gt;
+
+&lt;p&gt;I really, really, really, hope to figure out this blog setup and I might start
+building it from scratch.  I can&#39;t figure out how to link pages to the older and
+newer tags at the bottom of the page and it&#39;s frustrating.  I also recently
+joined a gym so I can start jogging and work my way up to running again.  I miss
+doing cardio and I think it would relieve a lot of stress.  It definitely has
+been a tough week but I figure if I made it this far I can go farther for sure.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>SQL and Final Project Status</title>
+   <link href="http://a2k11.github.io/2014/09/29/sql-capstonepost/"/>
+   <updated>2014-09-29T00:00:00-04:00</updated>
+   <id>http://a2k11.github.io/2014/09/29/sql-capstonepost</id>
+   <content type="html">&lt;h3&gt;SQL and Final Project Status 9/29/14&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;I have a case of the Mondays.&lt;/em&gt;  I&#39;m not feeling too well, and I believe I
+caught something from NYC&#39;s various subway systems.  It also means I will be
+trying to get more rest for the next couple days.  I just learned some basic
+Query language code which is not too complicated.  The biggest task will be to
+use SQL effectively and without trouble later on.  I have a little bit of work
+to do with my final project and I&#39;m not too sure I will be able to follow
+through with my proposal.  It is hard to plan this far ahead considering we are
+only through week 1.  Hopefully I will be able to figure out more within the
+next few days.  Here are some SQL functions I have learned:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;SELECT * FROM (table) WHERE&lt;/li&gt;
+&lt;li&gt;ORDER BY&lt;/li&gt;
+&lt;li&gt;LIKE and ILIKE&lt;/li&gt;
+&lt;li&gt;OR, AND&lt;/li&gt;
+&lt;li&gt;IS NULL&lt;/li&gt;
+&lt;li&gt;...FROM (table) JOIN (another table) ON (primary = foreign keys)&lt;/li&gt;
+&lt;li&gt;GROUP BY (label)&lt;/li&gt;
+&lt;li&gt;INSERT INTO&lt;/li&gt;
+&lt;li&gt;UPDATE&lt;/li&gt;
+&lt;li&gt;DELETE&lt;/li&gt;
+&lt;/ol&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Adam's Thoughts</title>
+   <link href="http://a2k11.github.io/2014/09/26/introduction-adam/"/>
+   <updated>2014-09-26T00:00:00-04:00</updated>
+   <id>http://a2k11.github.io/2014/09/26/introduction-adam</id>
+   <content type="html">&lt;p&gt;&lt;em&gt;Dedicated to help and understanding.&lt;/em&gt;  The idea of this blog is to help me
+understand the concepts I learn during the week.  Hopefully I will be able to
+produce posts which provide help to others who have similar problems.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3&gt;Providing Information&lt;/h3&gt;
+
+&lt;p&gt;My webpage is located &lt;a href=&quot;http://a2k11.github.io&quot;&gt;here&lt;/a&gt;.  I will also be working on
+this site as time goes on.  It will get better over time, I guarantee it!&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>First Post</title>
+   <link href="http://a2k11.github.io/2014/09/26/firstpost/"/>
+   <updated>2014-09-26T00:00:00-04:00</updated>
+   <id>http://a2k11.github.io/2014/09/26/firstpost</id>
+   <content type="html">&lt;h3&gt;First Post 9/26/14&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;I&#39;m a part of this now.&lt;/em&gt;  My first week at the Ruby on Rails
+&lt;a href=&quot;http://www.thisismetis.com&quot;&gt;Metis&lt;/a&gt; has been very cool so far.  I have met a lot
+of new friends and have learned a lot about the programming language Ruby.  Here
+is a list of what specifically I&#39;m working on with Ruby:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Passing Blocks to Methods&lt;/li&gt;
+&lt;li&gt;def method(variable, &amp;amp;block)&lt;/li&gt;
+&lt;li&gt;block.call&lt;/li&gt;
+&lt;li&gt;yield&lt;/li&gt;
+&lt;li&gt;Symbols --&gt; :symbol&lt;/li&gt;
+&lt;li&gt;Vim commands and becoming better at using it!&lt;/li&gt;
+&lt;li&gt;My typing skills&lt;/li&gt;
+&lt;li&gt;the methods .times, .each, and .map&lt;/li&gt;
+&lt;li&gt;Arrays and Hashes&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;h3&gt;Other Thoughts / Reflection&lt;/h3&gt;
+
+&lt;p&gt;So it has been a week now and I&#39;m a little tired.  I definitely feel great about
+the progress I&#39;ve made since Monday but I don&#39;t want to become content with just
+being ok.  I&#39;m literally counting the nights until I move into the
+&lt;a href=&quot;https://krash.io/&quot;&gt;Krash&lt;/a&gt; place I reserved through December.  Being only two
+blocks away from class will be awesome and I will probably sleep better at
+night.  I also will get to cook my meals again which is something I miss doing
+since it helps me eat healthy foods.  My passion project at the end of this
+course is still in the works.  I submitted my outline and I hope to have
+feedback sooner than later.  I hope I get a chance to view some of the sites
+while I&#39;m here in New York this weekend.&lt;/p&gt;
+
+&lt;p&gt;Cheers!&lt;/p&gt;
+</content>
+ </entry>
+ 
+
+</feed>

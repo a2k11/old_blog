@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+  {% include head.html %}
+
+  <body class="theme-base-0b">
+    <header class="masthead">
+      <center>
+        <h3><b><font color=black>{{ site.title }}</font></b></h3>
+      <p class="lead">{{ site.description }}</p>
+        <div class="colophon">
+          <ul class="colophon-links">
+            <li>
+              <a href="http://lnkd.in/dNWPfeb">Linked In</a>
+            </li>
+            <li>
+              <a href="https://a2k11.github.io">My Github</a>
+            </li>
+            <li>
+              <a href="http://adam.kaewell.com">My Website</a>
+            </li>
+            <h3><b><font color=black>My Blog Posts</font></b></h3>
+            {% for post in site.posts %}
+            <li>
+              <h5>
+                <a href="{{ post.url }}">{{ post.title }}
+                  <small>{{ post.date | date_to_string }}</small></a>
+              </h5>
+            </li>
+            {% endfor %}
+          </ul>
+      </center>
+    </header> 
+    <div class="content container">
+      {{ content }}
+    </div>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+title:        Adam Kaewell's Blog
+tagline:      'Adams Thoughts & Adventures'
+description:  'A blog dedicated to learning'
+url:          'http://a2k11.github.io'
+version:      1.1.1
+author:
+  name:       'Adam'
+  email:      'adam.kaewell@gmail.com'
+markdown:     rdiscount
+permalink:    pretty
+pygments:     true
+paginate:     1
