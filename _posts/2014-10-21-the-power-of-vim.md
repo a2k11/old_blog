@@ -48,6 +48,6 @@ tmux -2                    -->  start tmux with darker color
 
 </code></pre>
 
-Over time I hope to add to this ever growing knowledge of commands.  It is
+I hope to add to this ever growing knowledge of commands.  It is
 easier to learn by practicing editing files without ever touching your mouse.  I
 like to think of it as a style of the experts which is my goal to become.
