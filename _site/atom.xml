@@ -4,13 +4,70 @@
  <title>Adam Kaewell's Blog</title>
  <link href="http://a2k11.github.io/atom.xml" rel="self"/>
  <link href="http://a2k11.github.io/"/>
- <updated>2014-10-19T23:13:13-04:00</updated>
+ <updated>2014-10-21T13:33:56-04:00</updated>
  <id>http://a2k11.github.io</id>
  <author>
    <name>Adam</name>
    <email>adam.kaewell@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>The Power of Vim</title>
+   <link href="http://a2k11.github.io/2014/10/21/the-power-of-vim/"/>
+   <updated>2014-10-21T00:00:00-04:00</updated>
+   <id>http://a2k11.github.io/2014/10/21/the-power-of-vim</id>
+   <content type="html">&lt;h3&gt;Vim and Tmux Commands&lt;/h3&gt;
+
+&lt;p&gt;Vim is Vi Improved.  It is a text editor that is based off of vi which was a
+text editor for unix based systems.  It is a free open source software which was
+designed for use from a command line interface and a stand only application.  It
+was first released in 1991 and has been updated 23 additional times.  For the
+past 4 1/2 weeks I&#39;ve been trying to become an efficient and productive vim
+user.  It is difficult to not enter &quot;INSERT&quot; mode and correct all your mistakes
+by using the up and down arrows.  You have to be patient with vim in order to
+learn its power and it is very powerful.  Here is a list of the common commands
+I use with vim as of right now and I hope to keep adding to this arsenal over
+time.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;
+VIM COMMANDS
+
+vim (filename)         --&gt;  open filename for edits
+(space) + n + t        --&gt;  new vim tab
+(space) + p + (tab)    --&gt;  view next tab
+(space) + n + (tab)    --&gt;  view previous tab
+:!                     --&gt;  mkdir
+:e                     --&gt;  newfile / mkdir
+(ctrl) + p             --&gt;  search for file
+:%s/oldthing/newthing  --&gt;  replace
+gg                     --&gt;  go to top
+(shift) + g            --&gt;  go to bottom
+ciw                    --&gt;  change inside of word
+.                      --&gt;  repeat change
+==                     --&gt;  align line correctly
+= + (shift) + g        --&gt;  align everything below
+(shift) + j            --&gt;  smash two lines together
+(shift) + a            --&gt;  go to end of line
+e                      --&gt;  go to the end of next word
+w                      --&gt;  go to the beginning of next word
+:sort                  --&gt;  sort the contents
+:vs                    --&gt;  split the vim window
+
+TMUX COMMANDS
+
+tmux -2                    --&gt;  start tmux with darker color
+(ctrl + a) + (shift + 5)   --&gt;  create two terminal windows vertical
+(ctrl + a) + (shift + &#39;)   --&gt;  create two terminal windows horizontal 
+
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;Over time I hope to add to this ever growing knowledge of commands.  It is
+easier to learn by practicing editing files without ever touching your mouse.  I
+like to think of it as a style of the experts which is my goal to become.&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Class Relationships</title>
