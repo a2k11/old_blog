@@ -4,7 +4,7 @@
  <title>Adam Kaewell's Blog</title>
  <link href="http://a2k11.github.io/atom.xml" rel="self"/>
  <link href="http://a2k11.github.io/"/>
- <updated>2014-10-21T13:33:56-04:00</updated>
+ <updated>2014-10-21T23:38:18-04:00</updated>
  <id>http://a2k11.github.io</id>
  <author>
    <name>Adam</name>
@@ -63,7 +63,7 @@ tmux -2                    --&gt;  start tmux with darker color
 &lt;/code&gt;&lt;/pre&gt;
 
 
-&lt;p&gt;Over time I hope to add to this ever growing knowledge of commands.  It is
+&lt;p&gt;I hope to add to this ever growing knowledge of commands.  It is
 easier to learn by practicing editing files without ever touching your mouse.  I
 like to think of it as a style of the experts which is my goal to become.&lt;/p&gt;
 </content>
