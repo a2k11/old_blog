@@ -71,8 +71,8 @@ He wants to get underneath the surface of people so he writes down notes during
 the whole process.  Odd word choice, apparent rises in anxiety levels, or just 
 an unclear comment are few of the many examples.  But when he finds a soft spot on that tomato he sticks his finger in it!  I have to admit that makes me 
 nervous for the next time I'm being interviewed.  I asked Brandon for some 
-advice for the people about to be interviewed at the end of his speech.  He 
-replied with being prepared, researching the company you are applying to, being
+advice for people about to be interviewed at the end of his speech.  He replied
+with being prepared, researching the company you are applying to, being
 authentic, and to ask for the transparency technique at the end so you can have
 a chance to reinforce who you are as a potential employee.  I enjoyed attending
 this event.  Even though I'm not an interviewer, I learned they have a 
