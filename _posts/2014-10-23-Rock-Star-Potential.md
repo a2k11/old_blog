@@ -10,8 +10,12 @@ describe as incredibly wise and thought provoking.  [Brandon
 Atkinson](http://blog.appnexus.com/author/batkinson/) from 
 [Global Services AppNexus](http://www.appnexus.com/globalservices/) delivered 
 an amazing talk titled  <strong>Rock Star Potential Interview Training.
-</strong>  I was curious but  wondered if this event would be worth my time.  
-I'm not an interviewer and I'm going to be the *victim* of being interviewed in the next few months.  I have the difficult challenge of keeping my head held high while I persevere through interviews.  I was very close to going back to my [Krash](https://krash.io) pad and working on my portfolio.  But I'm glad I attended Brandon's presentation and here is why.
+</strong>  I was curious but  wondered if this event would be worth my time.
+I'm not an interviewer and I'm going to be the *victim* of being interviewed in
+the next few months.  I have the difficult challenge of keeping my head held 
+high while I persevere through interviews.  I was very close to going back to 
+my [Krash](https://krash.io) pad and working on my portfolio.  But I'm glad I 
+attended Brandon's presentation and here is why.
 
 <p>
 Brandon Atkinson shared his experiences and knowledge about 
