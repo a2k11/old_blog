@@ -58,7 +58,7 @@ other facts is acceptable and encouraged because you now have the ability to
 back up your words.  Nothing is ever off the table.  The company wants to be
 happy with their hire and they want their new employee to be happy too.  You
 have more power than you realize.  Finally, don't ask lame questions.  Elliott
-and Erin gave us some great examples to questions we should ask:
+and Erin gave us some great examples of questions we should ask:
 
     + Could I sit with customer service for a day to better understand the production?
     + What would you like to see from me in the first 30, 60, 90 days that would make you think you made the right choice?
