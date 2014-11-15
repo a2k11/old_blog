@@ -3,7 +3,7 @@ layout: post
 title: It's Always Sunny in ... the Request, Response Cycle
 ---
 
-### It's Always Sunny in ... the Request, Response Cycle
+### Rails Applications and the Web Server
 
 With an internet browser, the user can interact with your application.  My job is to build
 this application.  It is  difficult to become a master of developing rails

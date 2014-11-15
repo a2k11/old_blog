@@ -4,7 +4,7 @@
  <title>Adam Kaewell's Blog</title>
  <link href="http://a2k11.github.io/atom.xml" rel="self"/>
  <link href="http://a2k11.github.io/"/>
- <updated>2014-11-15T17:16:31-05:00</updated>
+ <updated>2014-11-15T17:18:22-05:00</updated>
  <id>http://a2k11.github.io</id>
  <author>
    <name>Adam</name>
@@ -13,7 +13,7 @@
 
  
  <entry>
-   <title>First Post</title>
+   <title>It's Always Sunny in ... the Request, Response Cycle</title>
    <link href="http://a2k11.github.io/2014/11/15/requestresponse/"/>
    <updated>2014-11-15T00:00:00-05:00</updated>
    <id>http://a2k11.github.io/2014/11/15/requestresponse</id>
