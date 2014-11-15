@@ -4,7 +4,7 @@
  <title>Adam Kaewell's Blog</title>
  <link href="http://a2k11.github.io/atom.xml" rel="self"/>
  <link href="http://a2k11.github.io/"/>
- <updated>2014-11-15T17:18:22-05:00</updated>
+ <updated>2014-11-15T17:19:40-05:00</updated>
  <id>http://a2k11.github.io</id>
  <author>
    <name>Adam</name>
@@ -17,7 +17,7 @@
    <link href="http://a2k11.github.io/2014/11/15/requestresponse/"/>
    <updated>2014-11-15T00:00:00-05:00</updated>
    <id>http://a2k11.github.io/2014/11/15/requestresponse</id>
-   <content type="html">&lt;h3&gt;It&#39;s Always Sunny in ... the Request, Response Cycle&lt;/h3&gt;
+   <content type="html">&lt;h3&gt;Rails Applications and the Web Server&lt;/h3&gt;
 
 &lt;p&gt;With an internet browser, the user can interact with your application.  My job is to build
 this application.  It is  difficult to become a master of developing rails
