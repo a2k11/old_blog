@@ -7,7 +7,7 @@
   <link href="http://gmpg.org/xfn/11" rel="profile">
 
   <title>
-    Adam's Thoughts &middot; 
+    It's Always Sunny in ... the Request, Response Cycle &middot; 
     Adams Thoughts & Adventures
   </title>
 
@@ -114,33 +114,57 @@
     </header> 
     <div class="content container">
       <div class="post">
-  <h1>Adam's Thoughts</h1>
-  <span class="post-date">26 Sep 2014</span>
-  <p><em>Dedicated to help and understanding.</em>  The idea of this blog is to help me
-understand the concepts I learn during the week.  Hopefully I will be able to
-produce posts which provide help to others who have similar problems.</p>
+  <h1>It's Always Sunny in ... the Request, Response Cycle</h1>
+  <span class="post-date">15 Nov 2014</span>
+  <h3>Rails Applications and the Web Server</h3>
 
-<hr />
+<p>With an internet browser, the user can interact with your application.  My job is to build
+this application.  It is  difficult to become a master of developing rails
+applications if I don't understand what is happening behind the scenes.  The web
+server is a central part of the operation.  The request, response cycle
+describes the sequence of events through which the server handles and processes
+to and from a user's browser.</p>
 
-<h3>Providing Information</h3>
+<p><em>Frank, Dee, Mac, Dennis, and Charlie could create a rails application but it
+would be horrible.  Everything would go wrong and nothing would work.  It is one
+of my favorite shows and I laugh every time I watch an episode.  So we can refer
+to the user as Charlie since the others would vote him out due to creative
+differences.</em>  Charlie interacts with the browser which shows your web
+application.  Then Charlie clicks a button and that makes a request to the
+server.  This request hits the web server where it first sees Rack.  Rack wraps
+HTTP requests into a single method call to interface with Ruby web applications.
+It's a very useful API especially if your creating a Rails application.</p>
 
-<p>My webpage is located <a href="http://a2k11.github.io">here</a>.  I will also be working on
-this site as time goes on.  It will get better over time, I guarantee it!</p>
+<p><em>At this point you would probably think Dennis would announce himself as the
+manager.  It normally would be but Dennis is too obsessed with writing the about
+page to be just about himself.</em>  The request now sees the Rails application.
+The routes, <em>location in the application: config/routes.rb</em>, are used to figure
+out where the application needs to go.  It matches the request with the
+specified controller and controller action to perform.</p>
+
+<p>The controller can be seen as the director of the rails application.  It
+organizes the actions and defines them based on coding by the developer.  <em>Frank
+would in charge of the controller and would make Dee in charge of the Model.</em>  The
+controller calls out to the model if it needs to access the business logic.
+Databases are what models use to organize the information for an application.
+Postgresql is a database which uses SQL to access, update, delete, and create
+data objects.  The controller also renders views at the end of the interaction
+between the controller and model.</p>
+
+<p><em>Mac would want a huge part in the fame and success of this whole process.  In
+this scenario he would be the view after all the actions have been processed.</em>
+The views are what the user sees and the controller specifies a view after it
+gathers all the information and conducts the actions which we define.    The
+view could have some JavaScript, CSS, and ruby code inside each HTML document
+which is why we name our files accordingly (mac.html.erb, charlie.html.css,
+frank.html.js, etc.).  The response is now sent back to the web server and then
+to the browser where the user can view the newly rendered page.</p>
 
 </div>
 
 <div class="related">
   <h2>Related Posts</h2>
   <ul class="related-posts">
-    
-      <li>
-        <h3>
-          <a href="/2014/11/15/requestresponse/">
-            It's Always Sunny in ... the Request, Response Cycle
-            <small>15 Nov 2014</small>
-          </a>
-        </h3>
-      </li>
     
       <li>
         <h3>
@@ -156,6 +180,15 @@ this site as time goes on.  It will get better over time, I guarantee it!</p>
           <a href="/2014/10/23/Rock-Star-Potential/">
             Having the Potential to be a Rockstar
             <small>23 Oct 2014</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2014/10/21/the-power-of-vim/">
+            The Power of Vim
+            <small>21 Oct 2014</small>
           </a>
         </h3>
       </li>

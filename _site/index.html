@@ -48,6 +48,13 @@
             
             <li>
               <h5>
+                <a href="/2014/11/15/requestresponse/">It's Always Sunny in ... the Request, Response Cycle
+                  <small>15 Nov 2014</small></a>
+              </h5>
+            </li>
+            
+            <li>
+              <h5>
                 <a href="/2014/10/29/Finding-Jobs-You-Love/">Finding the jobs you love
                   <small>29 Oct 2014</small></a>
               </h5>
@@ -110,100 +117,56 @@
   
   <div class="post">
     <h1>
-      <a href="/2014/10/29/Finding-Jobs-You-Love/">
-        Finding the jobs you love
+      <a href="/2014/11/15/requestresponse/">
+        It's Always Sunny in ... the Request, Response Cycle
       </a>
     </h1>
 
-    <span class="post-date">29 Oct 2014</span>
+    <span class="post-date">15 Nov 2014</span>
 
-    <h3>Elliott Bell &amp; Erin Greenawald From: <a href="https://www.themuse.com">The Muse</a></h3>
+    <h3>Rails Applications and the Web Server</h3>
 
-<h3>Presentation @ <a href="https://www.wework.com">WeWork</a> on October 28, 2014, 6:00-7:00PM</h3>
+<p>With an internet browser, the user can interact with your application.  My job is to build
+this application.  It is  difficult to become a master of developing rails
+applications if I don't understand what is happening behind the scenes.  The web
+server is a central part of the operation.  The request, response cycle
+describes the sequence of events through which the server handles and processes
+to and from a user's browser.</p>
 
-<p>What do you want to do with your life?  It's a question we all ask ourselves.
-It's not an easy one to answer as we go through challenges in our career paths.
-We make choices and we don't know what they'll mean down the road.  When it is
-time to search for jobs our path doesn't become easier.  We keep asking
-questions thinking about our skills, potential, and value to help a
-company.  Do I have enough experience?  Do I stand out?  Can I provide something for
-this company?  Elliott Bell and Erin Greenawald from <a href="https://www.themuse.com">The Muse</a>
-delivered an eye opening presentation about finding the jobs you love.  As we
-enter the gauntlet of interviews and job searching,
-<strong>The Muse</strong> helps us with the tools we need to succeed and to find jobs which
-inspire us.  Elliott explained how a company is neither good or bad, but right or
-wrong for a person.  In order to accomplish your goal of acquiring that slice of paradise ( .. a
-job .. ), <strong>The Muse</strong> can offer exactly what you need.  Getting advice and gaining
-knowledge from this fascinating website are a few of its many enticing features.  Erin and Elliott
-presented four steps on how to not be basic when you job search:</p>
+<p><em>Frank, Dee, Mac, Dennis, and Charlie could create a rails application but it
+would be horrible.  Everything would go wrong and nothing would work.  It is one
+of my favorite shows and I laugh every time I watch an episode.  So we can refer
+to the user as Charlie since the others would vote him out due to creative
+differences.</em>  Charlie interacts with the browser which shows your web
+application.  Then Charlie clicks a button and that makes a request to the
+server.  This request hits the web server where it first sees Rack.  Rack wraps
+HTTP requests into a single method call to interface with Ruby web applications.
+It's a very useful API especially if your creating a Rails application.</p>
 
-<ol>
-<li><p>Find the right people to work with.</p>
+<p><em>At this point you would probably think Dennis would announce himself as the
+manager.  It normally would be but Dennis is too obsessed with writing the about
+page to be just about himself.</em>  The request now sees the Rails application.
+The routes, <em>location in the application: config/routes.rb</em>, are used to figure
+out where the application needs to go.  It matches the request with the
+specified controller and controller action to perform.</p>
 
-<ul>
-<li>People always think they want to work for Google because it's the popular,
-'sexy' company.  This is not going to lead you to a career that makes you happy.
-A company's culture defines their values and personality.  Finding the people
-you fit in with and who can also make you happy are a priority in job hunting.</li>
-</ul>
-</li>
-<li><p>Talk to people at your favorite companies.</p>
+<p>The controller can be seen as the director of the rails application.  It
+organizes the actions and defines them based on coding by the developer.  <em>Frank
+would in charge of the controller and would make Dee in charge of the Model.</em>  The
+controller calls out to the model if it needs to access the business logic.
+Databases are what models use to organize the information for an application.
+Postgresql is a database which uses SQL to access, update, delete, and create
+data objects.  The controller also renders views at the end of the interaction
+between the controller and model.</p>
 
-<ul>
-<li>Learning how to have an informational interview is a great way to subtly sell
-yourself.  The ability to go out, meet people, and talk to them is a huge
-advantage.  Elliott described this as being your best friend.  Another key
-psychological trigger is asking for help because people like to help if they
-can.  Complimenting can lead to increased confidence which may inspire your
-<em>mentor</em> to help more.  If you start having a conversation then the
-other person will begin to ask questions.  Don't ask if they are hiring. Make
-the conversation about them because people love talking about themselves.
-Creating a connection is very important.  There's nothing wrong with
-specifically reaching out and being persistent unless they tell you no.</li>
-</ul>
-</li>
-<li><p>Get your application to the point.</p>
-
-<ul>
-<li>The K.I.S.S. method (Keep It Simple, Stupid) defines how you want to keep your
-application and resume to the point.  You want to have some creative, fun cover
-letter to separate yourself from other applicants.  This also lets the company
-know you researched and want to be a part of their culture.  And above all else,
-make no spelling errors!  Always stay professional but convey how you understand
-the company culture.  Explain why you love the company and why you would be a
-great fit.</li>
-</ul>
-</li>
-<li><p>Nail the interview.</p>
-
-<ul>
-<li><p>Nail the little things.  It is important to stay genuine and honest while
-telling your story.  But tell a great story!  It's your time to shine.  Note any
-existing projects you have worked on and suggest how that experience could help
-the company.  Know your value because you deserve it.  Researching a company or
-other facts is acceptable and encouraged because you now have the ability to
-back up your words.  Nothing is ever off the table.  The company wants to be
-happy with their hire and they want their new employee to be happy too.  You
-have more power than you realize.  Finally, don't ask lame questions.  Elliott
-and Erin gave us some great examples to questions we should ask:</p>
-
-<ul>
-<li>Could I sit with customer service for a day to better understand the production?</li>
-<li>What would you like to see from me in the first 30, 60, 90 days that would make you think you made the right choice?</li>
-<li>Can you show me an example of a project you recently completed that you're really proud of?</li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-
-
-<hr />
-
-<p>In closing, <strong>The Muse</strong> is a great way to hit the ground running when searching for
-jobs.  They offer a lot of useful information to help market yourself and build
-your skills for interviews.  I just joined today and I look forward to absorbing
-all its power.</p>
+<p><em>Mac would want a huge part in the fame and success of this whole process.  In
+this scenario he would be the view after all the actions have been processed.</em>
+The views are what the user sees and the controller specifies a view after it
+gathers all the information and conducts the actions which we define.    The
+view could have some JavaScript, CSS, and ruby code inside each HTML document
+which is why we name our files accordingly (mac.html.erb, charlie.html.css,
+frank.html.js, etc.).  The response is now sent back to the web server and then
+to the browser where the user can view the newly rendered page.</p>
 
   </div>
   

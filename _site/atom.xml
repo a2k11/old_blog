@@ -4,13 +4,64 @@
  <title>Adam Kaewell's Blog</title>
  <link href="http://a2k11.github.io/atom.xml" rel="self"/>
  <link href="http://a2k11.github.io/"/>
- <updated>2014-10-29T23:28:04-04:00</updated>
+ <updated>2014-11-15T17:19:40-05:00</updated>
  <id>http://a2k11.github.io</id>
  <author>
    <name>Adam</name>
    <email>adam.kaewell@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>It's Always Sunny in ... the Request, Response Cycle</title>
+   <link href="http://a2k11.github.io/2014/11/15/requestresponse/"/>
+   <updated>2014-11-15T00:00:00-05:00</updated>
+   <id>http://a2k11.github.io/2014/11/15/requestresponse</id>
+   <content type="html">&lt;h3&gt;Rails Applications and the Web Server&lt;/h3&gt;
+
+&lt;p&gt;With an internet browser, the user can interact with your application.  My job is to build
+this application.  It is  difficult to become a master of developing rails
+applications if I don&#39;t understand what is happening behind the scenes.  The web
+server is a central part of the operation.  The request, response cycle
+describes the sequence of events through which the server handles and processes
+to and from a user&#39;s browser.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Frank, Dee, Mac, Dennis, and Charlie could create a rails application but it
+would be horrible.  Everything would go wrong and nothing would work.  It is one
+of my favorite shows and I laugh every time I watch an episode.  So we can refer
+to the user as Charlie since the others would vote him out due to creative
+differences.&lt;/em&gt;  Charlie interacts with the browser which shows your web
+application.  Then Charlie clicks a button and that makes a request to the
+server.  This request hits the web server where it first sees Rack.  Rack wraps
+HTTP requests into a single method call to interface with Ruby web applications.
+It&#39;s a very useful API especially if your creating a Rails application.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;At this point you would probably think Dennis would announce himself as the
+manager.  It normally would be but Dennis is too obsessed with writing the about
+page to be just about himself.&lt;/em&gt;  The request now sees the Rails application.
+The routes, &lt;em&gt;location in the application: config/routes.rb&lt;/em&gt;, are used to figure
+out where the application needs to go.  It matches the request with the
+specified controller and controller action to perform.&lt;/p&gt;
+
+&lt;p&gt;The controller can be seen as the director of the rails application.  It
+organizes the actions and defines them based on coding by the developer.  &lt;em&gt;Frank
+would in charge of the controller and would make Dee in charge of the Model.&lt;/em&gt;  The
+controller calls out to the model if it needs to access the business logic.
+Databases are what models use to organize the information for an application.
+Postgresql is a database which uses SQL to access, update, delete, and create
+data objects.  The controller also renders views at the end of the interaction
+between the controller and model.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Mac would want a huge part in the fame and success of this whole process.  In
+this scenario he would be the view after all the actions have been processed.&lt;/em&gt;
+The views are what the user sees and the controller specifies a view after it
+gathers all the information and conducts the actions which we define.    The
+view could have some JavaScript, CSS, and ruby code inside each HTML document
+which is why we name our files accordingly (mac.html.erb, charlie.html.css,
+frank.html.js, etc.).  The response is now sent back to the web server and then
+to the browser where the user can view the newly rendered page.&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Finding the jobs you love</title>
@@ -85,7 +136,7 @@ other facts is acceptable and encouraged because you now have the ability to
 back up your words.  Nothing is ever off the table.  The company wants to be
 happy with their hire and they want their new employee to be happy too.  You
 have more power than you realize.  Finally, don&#39;t ask lame questions.  Elliott
-and Erin gave us some great examples to questions we should ask:&lt;/p&gt;
+and Erin gave us some great examples of questions we should ask:&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Could I sit with customer service for a day to better understand the production?&lt;/li&gt;
