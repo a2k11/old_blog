@@ -8,7 +8,7 @@
 
   <title>
     
-    Overcoming Challenges
+    Adam Kaewell's Blog
   </title>
 
   <!-- CSS -->
@@ -154,7 +154,7 @@ There is a helpful gem called
 and it is an audio/video transcoder for paperclip.  This gem uses avconv which
 is a fast video and audio converter.</p>
 
-<p>So here is a snippet of code and how I was able to make this work:</p>
+<p>Here is a snippet of code and how I was able to make this work:</p>
 
 <pre><code>
   has_attached_file(
@@ -175,7 +175,7 @@ is a fast video and audio converter.</p>
 
 <p>I set a custom path to organize the files saved in my S3 storage.  The styles is
 where I was able to select specific options.  The strict option with the value
-experimental is important for allowing non-standardized experimental things
+experimental is important for allowing non-standardized experimental things.
 The reason for setting this option is because avconv does not fully support
 transcoding mp4 videos.  The s option refers to the size.  Now there is a
 geometry option which can be written before convert_options in the first layer
@@ -197,7 +197,7 @@ an image.  Here is my example:</p>
 figure out this process.  I knew I had to research exactly how avconv worked and
 spend time understanding some of the many properties of video files.  There are
 a lot of options you can fool around with and I recommend you start there before
-jumping into the code.  It is a great tool for manipulating video files.</p>
+jumping into the code.</p>
 
   </div>
   

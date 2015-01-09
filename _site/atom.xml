@@ -4,7 +4,7 @@
  <title>Adam Kaewell's Blog</title>
  <link href="http://a2k11.github.io/atom.xml" rel="self"/>
  <link href="http://a2k11.github.io/"/>
- <updated>2015-01-09T17:14:50-05:00</updated>
+ <updated>2015-01-09T17:32:59-05:00</updated>
  <id>http://a2k11.github.io</id>
  <author>
    <name>Adam</name>
@@ -40,7 +40,7 @@ There is a helpful gem called
 and it is an audio/video transcoder for paperclip.  This gem uses avconv which
 is a fast video and audio converter.&lt;/p&gt;
 
-&lt;p&gt;So here is a snippet of code and how I was able to make this work:&lt;/p&gt;
+&lt;p&gt;Here is a snippet of code and how I was able to make this work:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;
   has_attached_file(
@@ -61,7 +61,7 @@ is a fast video and audio converter.&lt;/p&gt;
 
 &lt;p&gt;I set a custom path to organize the files saved in my S3 storage.  The styles is
 where I was able to select specific options.  The strict option with the value
-experimental is important for allowing non-standardized experimental things
+experimental is important for allowing non-standardized experimental things.
 The reason for setting this option is because avconv does not fully support
 transcoding mp4 videos.  The s option refers to the size.  Now there is a
 geometry option which can be written before convert_options in the first layer
@@ -83,7 +83,7 @@ an image.  Here is my example:&lt;/p&gt;
 figure out this process.  I knew I had to research exactly how avconv worked and
 spend time understanding some of the many properties of video files.  There are
 a lot of options you can fool around with and I recommend you start there before
-jumping into the code.  It is a great tool for manipulating video files.&lt;/p&gt;
+jumping into the code.&lt;/p&gt;
 </content>
  </entry>
  
