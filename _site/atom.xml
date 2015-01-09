@@ -4,7 +4,7 @@
  <title>Adam Kaewell's Blog</title>
  <link href="http://a2k11.github.io/atom.xml" rel="self"/>
  <link href="http://a2k11.github.io/"/>
- <updated>2014-11-15T17:19:40-05:00</updated>
+ <updated>2015-01-09T17:14:50-05:00</updated>
  <id>http://a2k11.github.io</id>
  <author>
    <name>Adam</name>
@@ -13,53 +13,134 @@
 
  
  <entry>
+   <title>Video Transcoding</title>
+   <link href="http://a2k11.github.io/2015/01/09/video-transcoding/"/>
+   <updated>2015-01-09T00:00:00-05:00</updated>
+   <id>http://a2k11.github.io/2015/01/09/video-transcoding</id>
+   <content type="html">&lt;h3&gt;Video Transcoding with paperclip-av-transcoder &amp;amp; avconv&lt;/h3&gt;
+
+&lt;p&gt;During the past month, I have been working on creating an application which
+allows users to upload videos.  Video clip sharing applications like vine are
+very fascinating and I wanted to create something similar.  I&#39;m using a JavaScript
+HTML5 video player to play the videos and Amazon&#39;s S3 storage to store the data.
+In order to play each MOV file from an iPhone, for example, I need to transcode
+it into mp4 format for it to be playable on my video player.  This is one of the
+formats a HTML5 video player can play.  After I figured out exactly what I needed
+to do to accomplish all this, I then proceeded to understand the function of each
+tool.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/thoughtbot/paperclip&quot;&gt;Paperclip&lt;/a&gt; is intended as an easy file
+attachment library for Active Record.  This is a great tool provided
+by thoughtbot and I use it frequently throughout my projects.  It provides a way
+to store image files to a file system while being tracked and updated through
+a database like Postgresql.  This sounds great but I&#39;m dealing with video
+files which require more attention when it comes to settings and formats.
+There is a helpful gem called
+&lt;a href=&quot;https://github.com/ruby-av/paperclip-av-transcoder&quot;&gt;paperclip-av-transcoder&lt;/a&gt;
+and it is an audio/video transcoder for paperclip.  This gem uses avconv which
+is a fast video and audio converter.&lt;/p&gt;
+
+&lt;p&gt;So here is a snippet of code and how I was able to make this work:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;
+  has_attached_file(
+    :video,
+    path: &quot;/:class/:id/:style/:filename&quot;,
+    styles: {
+      original: { format: &quot;mp4&quot;,
+        convert_options: {
+          output: { strict: &quot;experimental&quot;, s: &quot;480x270&quot; }}},
+      thumb: { format: &quot;jpg&quot;,
+        convert_options: {
+          output: { strict: &quot;experimental&quot;, ss: 1, vframes: 1, s: &quot;120x67&quot; }}}
+    },
+    processors: [:transcoder]
+  )
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;I set a custom path to organize the files saved in my S3 storage.  The styles is
+where I was able to select specific options.  The strict option with the value
+experimental is important for allowing non-standardized experimental things
+The reason for setting this option is because avconv does not fully support
+transcoding mp4 videos.  The s option refers to the size.  Now there is a
+geometry option which can be written before convert_options in the first layer
+of options for a style.  This wasn&#39;t working for me.  The convert_options
+setting is quite handy because it literally takes whatever options you place
+inside its brackets and executes them like in an avconv terminal line.
+For example:&lt;/p&gt;
+
+&lt;p&gt;~ %&gt; avconv -i input.MOV -strict experimental -s 480x270 output.mp4&lt;/p&gt;
+
+&lt;p&gt;Creating the thumbnail was more challenging due to more options to set.  The s
+option refers to the position in the video that you want to take the image.
+The vframes options sets the number of frames to record which is just one for
+an image.  Here is my example:&lt;/p&gt;
+
+&lt;p&gt;~ %&gt; avconv -i input.MOV -strict experimental -ss 1 -vframes 1 -s 120x67 output.jpg&lt;/p&gt;
+
+&lt;p&gt;At first I was using Amazon&#39;s Elastic Transcoder service because I was unable to
+figure out this process.  I knew I had to research exactly how avconv worked and
+spend time understanding some of the many properties of video files.  There are
+a lot of options you can fool around with and I recommend you start there before
+jumping into the code.  It is a great tool for manipulating video files.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
    <title>It's Always Sunny in ... the Request, Response Cycle</title>
    <link href="http://a2k11.github.io/2014/11/15/requestresponse/"/>
    <updated>2014-11-15T00:00:00-05:00</updated>
    <id>http://a2k11.github.io/2014/11/15/requestresponse</id>
-   <content type="html">&lt;h3&gt;Rails Applications and the Web Server&lt;/h3&gt;
+   <content type="html">&lt;h3&gt;A Rails Application and the Web Server&lt;/h3&gt;
 
 &lt;p&gt;With an internet browser, the user can interact with your application.  My job is to build
 this application.  It is  difficult to become a master of developing rails
 applications if I don&#39;t understand what is happening behind the scenes.  The web
 server is a central part of the operation.  The request, response cycle
 describes the sequence of events through which the server handles and processes
-to and from a user&#39;s browser.&lt;/p&gt;
+information.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Frank, Dee, Mac, Dennis, and Charlie could create a rails application but it
 would be horrible.  Everything would go wrong and nothing would work.  It is one
-of my favorite shows and I laugh every time I watch an episode.  So we can refer
+of my favorite shows because it&#39;s full of hilarious irony.  So we can refer
 to the user as Charlie since the others would vote him out due to creative
 differences.&lt;/em&gt;  Charlie interacts with the browser which shows your web
 application.  Then Charlie clicks a button and that makes a request to the
 server.  This request hits the web server where it first sees Rack.  Rack wraps
 HTTP requests into a single method call to interface with Ruby web applications.
-It&#39;s a very useful API especially if your creating a Rails application.&lt;/p&gt;
+It&#39;s a very useful API especially if you&#39;re creating a Rails application.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;At this point you would probably think Dennis would announce himself as the
 manager.  It normally would be but Dennis is too obsessed with writing the about
 page to be just about himself.&lt;/em&gt;  The request now sees the Rails application.
-The routes, &lt;em&gt;location in the application: config/routes.rb&lt;/em&gt;, are used to figure
+The routes ( &lt;em&gt;location in the application: config/routes.rb&lt;/em&gt; ) are used to figure
 out where the application needs to go.  It matches the request with the
 specified controller and controller action to perform.&lt;/p&gt;
 
 &lt;p&gt;The controller can be seen as the director of the rails application.  It
-organizes the actions and defines them based on coding by the developer.  &lt;em&gt;Frank
-would in charge of the controller and would make Dee in charge of the Model.&lt;/em&gt;  The
+organizes the actions and contains their definitions made by the developer.  &lt;em&gt;Frank
+would in charge of the controller and would make Dee in charge of the Model.&lt;br/&gt;
+Frank is funding the operation so whatever he wants will happen.  He corrupts
+Dee into taking care of the information due to his manipulative ways.&lt;/em&gt;  The
 controller calls out to the model if it needs to access the business logic.
 Databases are what models use to organize the information for an application.
 Postgresql is a database which uses SQL to access, update, delete, and create
-data objects.  The controller also renders views at the end of the interaction
-between the controller and model.&lt;/p&gt;
+data objects.  The controller can also renders views at the end of the interaction
+with the model.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;Mac would want a huge part in the fame and success of this whole process.  In
-this scenario he would be the view after all the actions have been processed.&lt;/em&gt;
-The views are what the user sees and the controller specifies a view after it
-gathers all the information and conducts the actions which we define.    The
-view could have some JavaScript, CSS, and ruby code inside each HTML document
-which is why we name our files accordingly (mac.html.erb, charlie.html.css,
-frank.html.js, etc.).  The response is now sent back to the web server and then
-to the browser where the user can view the newly rendered page.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Mac wants to be the face of the application.  He wants the fame and success of
+this whole process.  Mac ends up being the view after all the actions have been
+processed.  He will secure the app and restore the order, like he always does.&lt;/em&gt;&lt;br/&gt;
+The views are what the user sees.  The controller specifies a view after it
+gathers all the information and conducts the actions which we define.  The view
+could contain JavaScript, CSS, and ruby code.  Our HTML documents are named
+according to which programmable language we embed in the files (mac.html.erb,
+charlie.html.css, frank.html.js, etc.).  The response is now sent back to the
+web server and then to the browser where the user can view the newly rendered page.&lt;/p&gt;
+
+&lt;p&gt;After all this, the gang just decided to scrap the whole idea and figure out a
+way to get their money back.  &lt;em&gt;It&#39;s Always Sunny in the Request Response Cycle.&lt;/em&gt;&lt;/p&gt;
 </content>
  </entry>
  
